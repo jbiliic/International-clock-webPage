@@ -1,0 +1,212 @@
+/* Wooden color palette */
+:root {
+    --wood-light: #d2b48c;
+    --wood-medium: #b8860b;
+    --wood-dark: #8b4513;
+    --wood-accent: #a0522d;
+    --wood-text: #5c3317;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f5e7d0;
+    color: var(--wood-text);
+}
+
+.wooden-frame {
+    background-color: var(--wood-light);
+    padding: 30px;
+    border-radius: 15px;
+    border: 15px solid var(--wood-dark);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(
+        to bottom,
+        var(--wood-light),
+        var(--wood-medium)
+    );
+}
+
+.text-top {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 15px solid var(--wood-dark);
+    border-radius: 50%;
+    position: relative;
+    margin: 30px auto;
+    background: var(--wood-medium);
+    box-shadow: 
+        inset 0 0 20px var(--wood-accent),
+        0 0 20px rgba(0, 0, 0, 0.4);
+    background-image: 
+        radial-gradient(
+            circle at center,
+            var(--wood-light),
+            var(--wood-dark)
+        );
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: var(--wood-text);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hour-hand {
+    width: 30%;
+    left: 20%;
+    height: 8px;
+}
+
+.minute-hand {
+    height: 4px;
+}
+
+.second-hand {
+    height: 2px;
+    background: #8b0000; /* Dark red for contrast */
+}
+
+.center-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--wood-text);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.timezone-display {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--wood-text);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.digital-time {
+    font-size: 1.5em;
+    margin: 10px 0;
+    font-family: 'Courier New', monospace;
+    color: var(--wood-text);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.nums {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.clock-number {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5c3317; /* Dark brown for visibility */
+    transform-origin: 0 0;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px; /* Half of width */
+    margin-top: -10px; /* Half of height */
+}
+
+input {
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 4px;
+    border: 2px solid var(--wood-dark);
+    background-color: #f5e7d0;
+    font-family: 'Georgia', serif;
+}
+
+button {
+    padding: 8px 20px;
+    margin: 5px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--wood-accent);
+    color: #f5e7d0;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: var(--wood-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #333; /* Dark color for dots */
+  border-radius: 50%; /* Makes them circular */
+  transform-origin: center; /* Rotates from center */
+  left: 50%;
+  top: 50%;
+}
+#map {
+    height: 500px;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+.map-controls {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.map-controls button {
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+#selected-timezone {
+    font-style: italic;
+    margin-top: 10px;
+    text-align: center;
+}

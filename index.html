@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>International Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+</head>
+<body>
+    <div class ="text-top">
+        <h1 id = "headline">International Clock</h1>
+        <p>Welcome to the International Clock application!</p>
+        <p>This application displays the current time in various time zones around the world.</p>
+    </div>
+    <article class="clock">
+        <div class="clock-face">
+            
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+            <div class="center-dot"></div>
+            <div class="nums"></div>
+        </div>
+        <div class="timezone-display">Local Time</div>
+        <div class="digital-time">00:00:00</div>
+    </article>
+    <br>
+    <br>
+    <div class="search">
+        <p>You can also select a different city</p>
+        <input type="text" id="cityInput" placeholder="Enter city name" />
+        <div class="autocomplete-results">
+        <button id="selectButton">Select</button>
+    </div>
+    <div class="map-search">
+        <p>Search for a city on the map</p>
+        <!-- Interactive Map Container -->
+        <div id="map" style="height: 500px;"></div>
+        <div class="map-controls">
+            <button id="select-map-button">Select</button>
+        </div>
+        <div id="selected-timezone">Click on the map to select a timezone</div>
+    </div>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
